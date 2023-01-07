@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyHRMS.Entity\MyHRMS.Entity.csproj" />
+    <ProjectReference Include="..\MyHRMS.IReporsitory\MyHRMS.IReporsitory.csproj" />
+  </ItemGroup>
+
 </Project>
