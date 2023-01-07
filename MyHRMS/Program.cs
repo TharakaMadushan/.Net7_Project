@@ -22,6 +22,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else
+{
+    app.UseExceptionHandler(app =>
+    {
+        app.Run(async context =>
+        {
+            context.Response.StatusCode = 500;
+            await context.Response.WriteAsync("Some thing went wrong!, please contact Administrator");
+        });
+    });
+}
 
 app.UseHttpsRedirection();
 

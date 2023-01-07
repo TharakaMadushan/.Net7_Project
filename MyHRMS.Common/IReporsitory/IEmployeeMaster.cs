@@ -11,5 +11,9 @@ namespace MyHRMS.IReporsitory.IReporsitory
     public interface IEmployeeMaster
     {
         public List<EmployeeMaster> GetAllEmployees();
+        public EmployeeMaster GetEmployeeById(int empNo);
+        public EmployeeMaster CreateEmployee(EmployeeMaster emp);
+        public void UpdateEmployee(EmployeeMaster empNo);
+        public void DeleteEmployee(EmployeeMaster empNo);
     }
 }

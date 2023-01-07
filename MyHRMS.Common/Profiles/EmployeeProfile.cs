@@ -14,7 +14,10 @@ namespace MyHRMS.Common.Profiles
         public EmployeeProfile()
         {
             CreateMap<EmployeeMaster, EmployeeDTO>().ForMember(dest => dest.EmployeeFullName,
-                opt => opt.MapFrom(src => $"{src.FirstName } {src.LastName }"));
+                 opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"));
+
+            CreateMap<CreateEmployeeDTO, EmployeeMaster>();
+            CreateMap<UpdateEmployeeDTO, EmployeeMaster>();
         }
     }
 }
